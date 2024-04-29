@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html body * {
+  font-family: inherit;
+}
+
+.center-box::-webkit-scrollbar {
+  width: 4px;
+}
+
+.center-box::-webkit-scrollbar-thumb {
+  background-color: #0000001f !important;
+}
