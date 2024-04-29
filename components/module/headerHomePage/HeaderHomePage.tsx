@@ -5,17 +5,25 @@ import type { FC } from "react";
 import { CiLocationOn } from "react-icons/ci";
 import { IoIosArrowDown } from "react-icons/io";
 
-import { ButtonComponent, ModalComponent } from "@/components/custom";
-import { useDisclosure } from "@nextui-org/react";
+import { ModalComponent } from "@/components/custom";
 
 const HeaderHomePage: FC = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-
   const detailsModalButton = {
     titleButton: "شعبه",
     customStyles: "bg-primary-buttonColor text-white font-bold border-none outline-none",
     startIconButton: <CiLocationOn size={20} />,
     endIconButton: <IoIosArrowDown size={18} />,
+  };
+
+  const BoxShowModal = () => {
+    return (
+      <div className="flex flex-col mt-4">
+        <div className="border-1 border-secondary-borderChild rounded-[10px]">
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    );
   };
 
   return (
@@ -27,10 +35,11 @@ const HeaderHomePage: FC = () => {
         <div>
           <ModalComponent
             backdrop="blur"
-            titleModal="mmm"
+            titleModal="انتخاب شعبه"
             openButtonModalDetails={detailsModalButton}
+            headerStyle="bg-secondary-modalHeader text-black text-center justify-center items-center"
           >
-            <p>mmmm</p>
+            {BoxShowModal()}
           </ModalComponent>
         </div>
       </div>

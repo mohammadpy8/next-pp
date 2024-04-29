@@ -21,6 +21,8 @@ const config: Config = {
         },
         secondary: {
           base: "#717171",
+          modalHeader: "#EDEDED",
+          borderChild: "#CBCBCB",
         },
       },
       boxShadow: {
