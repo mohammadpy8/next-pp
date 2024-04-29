@@ -10,6 +10,7 @@ import {
   useDisclosure,
   Button,
 } from "@nextui-org/react";
+import { ButtonComponent } from "@/components/custom";
 
 type PropsModalComponent = {
   children: React.ReactNode;
@@ -18,6 +19,12 @@ type PropsModalComponent = {
   bodyStyle?: string;
   backdrop: "opaque" | "blur" | "transparent";
   closeTop?: boolean;
+  openButtonModalDetails: {
+    titleButton: string;
+    customStyles: string;
+    startIconButton: JSX.Element;
+    endIconButton: JSX.Element;
+  };
 };
 
 const ModalComponent: FC<PropsModalComponent> = ({
@@ -26,24 +33,36 @@ const ModalComponent: FC<PropsModalComponent> = ({
   headerStyle,
   titleModal,
   bodyStyle,
+  openButtonModalDetails: { customStyles, endIconButton, startIconButton, titleButton },
   closeTop,
 }) => {
-  const { isOpen, onClose } = useDisclosure();
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
-    <Modal isOpen={isOpen} onClose={onClose} backdrop={backdrop}>
-      <ModalContent>
-        {(onClose: () => void) => (
-          <>
-            <ModalHeader className={headerStyle}>{titleModal}</ModalHeader>
-            <ModalBody className={bodyStyle}>{children}</ModalBody>
-            <ModalFooter>
-              <Button onPress={onClose} color="primary">+</Button>
-            </ModalFooter>
-          </>
-        )}
-      </ModalContent>
-    </Modal>
+    <div>
+      <ButtonComponent
+        textButton={titleButton}
+        clickHander={() => onOpen()}
+        customStyles={customStyles}
+        startIconButton={startIconButton}
+        endIconButton={endIconButton}
+      />
+      <Modal isOpen={isOpen} onClose={onClose} backdrop={backdrop}>
+        <ModalContent>
+          {(onClose: () => void) => (
+            <>
+              <ModalHeader className={headerStyle}>{titleModal}</ModalHeader>
+              <ModalBody className={bodyStyle}>{children}</ModalBody>
+              <ModalFooter>
+                <Button onPress={onClose} color="primary">
+                  
+                </Button>
+              </ModalFooter>
+            </>
+          )}
+        </ModalContent>
+      </Modal>
+    </div>
   );
 };
 

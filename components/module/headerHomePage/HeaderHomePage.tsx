@@ -9,7 +9,14 @@ import { ButtonComponent, ModalComponent } from "@/components/custom";
 import { useDisclosure } from "@nextui-org/react";
 
 const HeaderHomePage: FC = () => {
-  const { onOpen } = useDisclosure();
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
+  const detailsModalButton = {
+    titleButton: "شعبه",
+    customStyles: "bg-primary-buttonColor text-white font-bold border-none outline-none",
+    startIconButton: <CiLocationOn size={20} />,
+    endIconButton: <IoIosArrowDown size={18} />,
+  };
 
   return (
     <div className="w-full">
@@ -18,18 +25,15 @@ const HeaderHomePage: FC = () => {
           <LogoHeaderSvg />
         </div>
         <div>
-          <ButtonComponent
-            textButton="شعبه"
-            clickHander={() => onOpen()}
-            customStyles="bg-primary-buttonColor text-white font-bold border-none outline-none"
-            startIconButton={<CiLocationOn size={20} />}
-            endIconButton={<IoIosArrowDown size={18} />}
-          />
+          <ModalComponent
+            backdrop="blur"
+            titleModal="mmm"
+            openButtonModalDetails={detailsModalButton}
+          >
+            <p>mmmm</p>
+          </ModalComponent>
         </div>
       </div>
-      <ModalComponent backdrop="blur" titleModal="mmm">
-        <p>mmmm</p>
-      </ModalComponent>
     </div>
   );
 };
