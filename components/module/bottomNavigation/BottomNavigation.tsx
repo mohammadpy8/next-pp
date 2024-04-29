@@ -14,10 +14,14 @@ const BottomNavigation: FC = () => {
 
   return (
     <div className="bg-white shadow-base w-[500px] h-18 fixed">
-      <div className="flex mx-[2rem] mt-2 justify-between">
+      <div className="flex mx-[2rem]  justify-between">
         <Link href="/">
-          <div className="flex flex-col gap-x-2 ">
-            <div>
+          <div
+            className={`flex flex-col gap-x-2 ${
+              pathname === "/" && "border-t-4 border-t-primary-base"
+            }`}
+          >
+            <div className="mt-2">
               <GoHomeFill color={pathname === "/" ? "#417F56" : "#717171"} size={35} />
             </div>
             <div className="flex justify-center items-center">
@@ -32,8 +36,12 @@ const BottomNavigation: FC = () => {
           </div>
         </Link>
         <Link href="/search">
-          <div className="flex flex-col gap-x-2 ">
-            <div className="flex justify-center items-center">
+          <div
+            className={`flex flex-col gap-x-2 ${
+              pathname === "/search" && "border-t-4 border-t-primary-base"
+            }`}
+          >
+            <div className="flex justify-center items-center mt-2">
               <RiSearch2Line color={pathname === "/search" ? "#417F56" : "#717171"} size={35} />
             </div>
             <div className="flex justify-center items-center">
@@ -48,8 +56,12 @@ const BottomNavigation: FC = () => {
           </div>
         </Link>
         <Link href="/cart">
-          <div className="flex flex-col gap-x-2 ">
-            <div className="flex justify-center items-center">
+          <div
+            className={`flex flex-col gap-x-2 ${
+              pathname === "/cart" && "border-t-4 border-t-primary-base"
+            }`}
+          >
+            <div className="flex justify-center items-center mt-2">
               <FiShoppingCart color={pathname === "/cart" ? "#417F56" : "#717171"} size={35} />
             </div>
             <div className="flex justify-center items-center">
@@ -64,8 +76,12 @@ const BottomNavigation: FC = () => {
           </div>
         </Link>
         <Link href="/order">
-          <div className="flex flex-col gap-x-2 ">
-            <div className="flex justify-center items-center">
+          <div
+            className={`flex flex-col gap-x-2 ${
+              pathname === "/order" && "border-t-4 border-t-primary-base"
+            }`}
+          >
+            <div className="flex justify-center items-center mt-2">
               <HiOutlineClipboardDocumentList
                 color={pathname === "/order" ? "#417F56" : "#717171"}
                 size={35}
@@ -83,8 +99,12 @@ const BottomNavigation: FC = () => {
           </div>
         </Link>
         <Link href="/profile">
-          <div className="flex flex-col gap-x-2 ">
-            <div className="flex justify-center items-center">
+          <div
+            className={`flex flex-col gap-x-2 ${
+              pathname === "/profile" && "border-t-4 border-t-primary-base"
+            }`}
+          >
+            <div className="flex justify-center items-center mt-2">
               <RiUserLine color={pathname === "/profile" ? "#417F56" : "#717171"} size={35} />
             </div>
             <div className="flex justify-center items-center">
