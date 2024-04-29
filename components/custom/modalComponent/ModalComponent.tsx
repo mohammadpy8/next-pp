@@ -19,6 +19,8 @@ type PropsModalComponent = {
   bodyStyle?: string;
   backdrop: "opaque" | "blur" | "transparent";
   closeTop?: boolean;
+  modalFooterComponent?: JSX.Element;
+  footerStyle?: string;
   openButtonModalDetails: {
     titleButton: string;
     customStyles: string;
@@ -33,6 +35,8 @@ const ModalComponent: FC<PropsModalComponent> = ({
   headerStyle,
   titleModal,
   bodyStyle,
+  footerStyle,
+  modalFooterComponent,
   openButtonModalDetails: { customStyles, endIconButton, startIconButton, titleButton },
   closeTop,
 }) => {
@@ -53,11 +57,7 @@ const ModalComponent: FC<PropsModalComponent> = ({
             <>
               <ModalHeader className={headerStyle}>{titleModal}</ModalHeader>
               <ModalBody className={bodyStyle}>{children}</ModalBody>
-              <ModalFooter>
-                {/* <Button onPress={onClose} color="primary">
-                  
-                </Button> */}
-              </ModalFooter>
+              <ModalFooter className={footerStyle}>{modalFooterComponent}</ModalFooter>
             </>
           )}
         </ModalContent>

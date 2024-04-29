@@ -9,7 +9,7 @@ type PropsButtonComponent = {
   textButton: string;
   clickHander?: (value: any) => void;
   customStyles?: string;
-  sizeButton?: string;
+  sizeButton?: "sm" | "md" | "lg";
 };
 
 const ButtonComponent: FC<PropsButtonComponent> = ({
@@ -20,10 +20,9 @@ const ButtonComponent: FC<PropsButtonComponent> = ({
   customStyles,
   sizeButton,
 }) => {
-
   return (
     <Button
-      onClick={clickHander ?? null}
+      onClick={clickHander}
       className={customStyles}
       size={sizeButton ?? "sm"}
       startContent={startIconButton}
