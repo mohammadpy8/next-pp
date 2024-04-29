@@ -54,9 +54,9 @@ const ModalComponent: FC<PropsModalComponent> = ({
               <ModalHeader className={headerStyle}>{titleModal}</ModalHeader>
               <ModalBody className={bodyStyle}>{children}</ModalBody>
               <ModalFooter>
-                <Button onPress={onClose} color="primary">
+                {/* <Button onPress={onClose} color="primary">
                   
-                </Button>
+                </Button> */}
               </ModalFooter>
             </>
           )}
