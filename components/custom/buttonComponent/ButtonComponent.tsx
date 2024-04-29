@@ -22,7 +22,7 @@ const ButtonComponent: FC<PropsButtonComponent> = ({
 }) => {
   return (
     <Button
-      onClick={clickHander ?? null}
+      onPress={() => clickHander}
       className={customStyles}
       size={sizeButton ?? "sm"}
       startContent={startIconButton}
