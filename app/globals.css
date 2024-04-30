@@ -17,3 +17,11 @@ html body * {
 .box-modal::-webkit-scrollbar {
   width: 0;
 }
+
+.menu-box::-webkit-scrollbar {
+  width: 1px;
+  height: 4px;
+}
+.menu-box::-webkit-scrollbar-thumb {
+  background-color: #0000001f !important;
+}

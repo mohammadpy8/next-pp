@@ -18,6 +18,7 @@ const config: Config = {
         primary: {
           base: "#417F56",
           buttonColor: "#21402B",
+          bgColor: "#E5F2E9",
         },
         secondary: {
           base: "#717171",

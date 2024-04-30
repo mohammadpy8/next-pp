@@ -1,4 +1,4 @@
-import { HeaderHomePage, SliderHomePage } from "@/components/module";
+import { HeaderHomePage, MenuHomePage, SliderHomePage } from "@/components/module";
 
 const HomePage = () => {
   return (
@@ -8,6 +8,9 @@ const HomePage = () => {
       </div>
       <div>
         <SliderHomePage />
+      </div>
+      <div>
+        <MenuHomePage />
       </div>
     </div>
   );
