@@ -19,7 +19,49 @@ const HeaderHomePage: FC = () => {
 
   const BoxShowModal = () => {
     return (
-      <div className="flex flex-col mt-4 space-y-4">
+      <div className="flex flex-col mt-4 space-y-4 max-h-[400px] overflow-hidden overflow-y-scroll box-modal">
+        <div className="border-1 border-secondary-borderChild rounded-[10px] flex justify-between">
+          <div>
+            <Image
+              src="/image/1.png"
+              width={150}
+              height={50}
+              alt="1"
+              className="w-[150px] h-[100px] rounded-r-[10px]"
+            />
+          </div>
+          <div className="flex flex-col mx-14 w-36">
+            <div className="mt-[9px] mr-6">
+              <span className="font-bold">شعبه اکباتان</span>
+            </div>
+            <div>
+              <span className="text-[10px] text-center">
+                شهرک اکباتان، فاز ۳، مجتمع تجاری کوروش، طبقه سوم
+              </span>
+            </div>
+          </div>
+        </div>
+        <div className="border-1 border-secondary-borderChild rounded-[10px] flex justify-between">
+          <div>
+            <Image
+              src="/image/1.png"
+              width={150}
+              height={50}
+              alt="1"
+              className="w-[150px] h-[100px] rounded-r-[10px]"
+            />
+          </div>
+          <div className="flex flex-col mx-14 w-36">
+            <div className="mt-[9px] mr-6">
+              <span className="font-bold">شعبه اکباتان</span>
+            </div>
+            <div>
+              <span className="text-[10px] text-center">
+                شهرک اکباتان، فاز ۳، مجتمع تجاری کوروش، طبقه سوم
+              </span>
+            </div>
+          </div>
+        </div>
         <div className="border-1 border-secondary-borderChild rounded-[10px] flex justify-between">
           <div>
             <Image

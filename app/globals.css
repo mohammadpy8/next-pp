@@ -13,3 +13,7 @@ html body * {
 .center-box::-webkit-scrollbar-thumb {
   background-color: #0000001f !important;
 }
+
+.box-modal::-webkit-scrollbar {
+  width: 0;
+}
