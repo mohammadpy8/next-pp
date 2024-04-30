@@ -6,7 +6,7 @@ import { BottomNavigation } from "@/components/module";
 
 import "./globals.css";
 
-const inter = Vazirmatn({ subsets: ["arabic"] });
+const vazirFont = Vazirmatn({ subsets: ["arabic"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,10 +19,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fa" dir="rtl">
+    <html lang="fa" dir="rtl" className={vazirFont.className}>
       <NextUIProviders>
         <body
-          className={`${inter.className} bg-gray-200`}
+          className="bg-gray-200"
           style={{
             padding: 0,
             margin: 0,
