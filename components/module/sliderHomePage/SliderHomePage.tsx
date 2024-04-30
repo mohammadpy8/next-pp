@@ -7,12 +7,16 @@ import { ShapeSvg } from "@/public/svg";
 
 const SliderHomePage: FC = () => {
   var settings = {
-    // dots: true,
+    dots: true,
     rtl: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    customPaging: function () {
+      return <div className="dot"></div>;
+    },
+    dotsClass: "slick-dots slick-thumb"
   };
 
   return (
