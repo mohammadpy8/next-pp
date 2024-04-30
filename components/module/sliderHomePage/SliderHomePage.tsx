@@ -3,6 +3,7 @@
 import type { FC } from "react";
 import Image from "next/image";
 import SliderCustom from "./style";
+import { ShapeSvg } from "@/public/svg";
 
 const SliderHomePage: FC = () => {
   var settings = {
@@ -15,7 +16,7 @@ const SliderHomePage: FC = () => {
   };
 
   return (
-    <div className="flex">
+    <div className="flex relative">
       <SliderCustom {...settings}>
         <div>
           <Image
@@ -57,6 +58,9 @@ const SliderHomePage: FC = () => {
           />
         </div>
       </SliderCustom>
+      <div className="absolute bottom-[7px] right-[200px]">
+        <ShapeSvg />
+      </div>
     </div>
   );
 };

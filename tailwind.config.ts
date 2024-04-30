@@ -31,6 +31,9 @@ const config: Config = {
       width: {
         fullS: "500px",
       },
+      borderRadius: {
+        sliderRaduis: "50% 50% 45% 55% / 100% 100% 0% 0% ",
+      },
     },
   },
   plugins: [nextui()],
