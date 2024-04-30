@@ -5,6 +5,7 @@ import { ProviderLayout, NextUIProviders } from "@/provider";
 import { BottomNavigation } from "@/components/module";
 
 import "./globals.css";
+// import 'swiper/css';
 
 const vazirFont = Vazirmatn({ subsets: ["arabic"] });
 
@@ -31,7 +32,7 @@ export default function RootLayout({
           <div className="flex mx-auto bg-white max-w-[500px] h-[100vh] overflow-hidden overflow-y-scroll center-box">
             {children}
           </div>
-          <div className="relative flex justify-center items-center bottom-9 ">
+          <div className="relative flex justify-center items-center bottom-8 ">
             <BottomNavigation />
           </div>
         </body>
