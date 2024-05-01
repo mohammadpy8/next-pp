@@ -18,7 +18,7 @@ const BottomNavigation: FC = () => {
         <Link href="/">
           <div
             className={`flex flex-col gap-x-2 ${
-              pathname === "/" && "border-t-4 border-t-primary-base"
+              pathname === "/" ?  "border-t-4 border-t-primary-base" : "border-t-4 border-t-transparent"
             }`}
           >
             <div className="mt-2">
@@ -37,8 +37,8 @@ const BottomNavigation: FC = () => {
         </Link>
         <Link href="/search">
           <div
-            className={`flex flex-col gap-x-2 ${
-              pathname === "/search" && "border-t-4 border-t-primary-base"
+            className={`flex flex-col gap-x-2  ${
+              pathname === "/search" ?  "border-t-4 border-t-primary-base" : "border-t-4 border-t-transparent"
             }`}
           >
             <div className="flex justify-center items-center mt-2">
@@ -57,8 +57,8 @@ const BottomNavigation: FC = () => {
         </Link>
         <Link href="/cart">
           <div
-            className={`flex flex-col gap-x-2 ${
-              pathname === "/cart" && "border-t-4 border-t-primary-base"
+            className={`flex flex-col gap-x-2  ${
+              pathname === "/cart" ?  "border-t-4 border-t-primary-base" : "border-t-4 border-t-transparent"
             }`}
           >
             <div className="flex justify-center items-center mt-2">
@@ -77,8 +77,8 @@ const BottomNavigation: FC = () => {
         </Link>
         <Link href="/order">
           <div
-            className={`flex flex-col gap-x-2 ${
-              pathname === "/order" && "border-t-4 border-t-primary-base"
+            className={`flex flex-col gap-x-2  ${
+              pathname === "/order" ?  "border-t-4 border-t-primary-base" : "border-t-4 border-t-transparent"
             }`}
           >
             <div className="flex justify-center items-center mt-2">
@@ -100,8 +100,8 @@ const BottomNavigation: FC = () => {
         </Link>
         <Link href="/profile">
           <div
-            className={`flex flex-col gap-x-2 ${
-              pathname === "/profile" && "border-t-4 border-t-primary-base"
+            className={`flex flex-col gap-x-2  ${
+              pathname === "/profile" ?  "border-t-4 border-t-primary-base" : "border-t-4 border-t-transparent"
             }`}
           >
             <div className="flex justify-center items-center mt-2">

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Vazirmatn } from "next/font/google";
 
-import { ProviderLayout, NextUIProviders } from "@/provider";
+import { ProviderLayout } from "@/provider";
 import { BottomNavigation } from "@/components/module";
 
 import "./globals.css";
@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fa" dir="rtl" className={vazirFont.className}>
-      <NextUIProviders>
+      <ProviderLayout>
         <body
           className="bg-gray-200"
           style={{
@@ -36,7 +36,7 @@ export default function RootLayout({
             <BottomNavigation />
           </div>
         </body>
-      </NextUIProviders>
+      </ProviderLayout>
     </html>
   );
 }

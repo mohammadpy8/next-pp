@@ -13,6 +13,7 @@ const SliderHomePage: FC = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    mmad: true,
     customPaging: function () {
       return <div className="dot"></div>;
     },
