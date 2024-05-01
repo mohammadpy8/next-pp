@@ -32,7 +32,7 @@ export default function RootLayout({
           <div className="flex mx-auto bg-white max-w-[500px] h-[100vh] overflow-hidden overflow-y-scroll center-box">
             {children}
           </div>
-          <div className="relative flex justify-center items-center bottom-8 ">
+          <div className="relative flex justify-center items-center bottom-8">
             <BottomNavigation />
           </div>
         </body>

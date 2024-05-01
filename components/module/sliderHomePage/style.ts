@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Slider from "react-slick";
 
 const SliderCustom = styled(Slider)(({ theme, as, forwardedAs,...rest }) => {
-  console.log("rest==>",rest, theme, as, forwardedAs)
+  console.log("rest==>",rest, theme)
   return ({ 
     "& .slick-initialized, & .slick-slider": {
       display: "flex",

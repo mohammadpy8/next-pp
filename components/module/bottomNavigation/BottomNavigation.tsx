@@ -13,7 +13,7 @@ const BottomNavigation: FC = () => {
   const pathname = usePathname();
 
   return (
-    <div className="bg-white shadow-base w-[500px] h-18 fixed">
+    <div className="bg-white shadow-base w-[500px] h-18 fixed pb-4">
       <div className="flex mx-[2rem]  justify-between">
         <Link href="/">
           <div
